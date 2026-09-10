@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie - Food Delivery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= LEFT SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            🍔 <span>Foodie</span>
+        </div>
+
+        <nav>
+
+            <div class="nav-item active">
+                <span>🏠</span>
+                <p>Home</p>
+            </div>
+
+            <div class="nav-item">
+                <span>🔍</span>
+                <p>Search</p>
+            </div>
+
+            <div class="nav-item">
+                <span>❤️</span>
+                <p>Favorites</p>
+            </div>
+
+            <div class="nav-item">
+                <span>📦</span>
+                <p>Orders</p>
+            </div>
+
+            <div class="nav-item">
+                <span>🛒</span>
+                <p>Cart</p>
+            </div>
+
+            <div class="nav-item">
+                <span>👤</span>
+                <p>Profile</p>
+            </div>
+
+        </nav>
+
+        <button class="order-button">
+            Order Now
+        </button>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main">
+
+        <header class="top-header">
+
+            <div>
+                <h2>Good Morning 👋</h2>
+                <p>What would you like to eat today?</p>
+            </div>
+
+            <div class="location">
+                📍 Sathyamangalam
+            </div>
+
+        </header>
+
+
+        <!-- SEARCH -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+                🔍
+                <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="Search for food or restaurants..."
+                >
+            </div>
+
+        </section>
+
+
+        <!-- CATEGORIES -->
+
+        <section class="categories">
+
+            <h2>Categories</h2>
+
+            <div class="category-list">
+
+                <div class="category active-category">
+                    <div>🍕</div>
+                    <span>Pizza</span>
+                </div>
+
+                <div class="category">
+                    <div>🍔</div>
+                    <span>Burgers</span>
+                </div>
+
+                <div class="category">
+                    <div>🍜</div>
+                    <span>Noodles</span>
+                </div>
+
+                <div class="category">
+                    <div>🍗</div>
+                    <span>Chicken</span>
+                </div>
+
+                <div class="category">
+                    <div>🍛</div>
+                    <span>Indian</span>
+                </div>
+
+                <div class="category">
+                    <div>🥗</div>
+                    <span>Healthy</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- POPULAR FOOD -->
+
+        <section class="food-section">
+
+            <div class="section-title">
+                <h2>Popular Near You</h2>
+                <a href="#">View all</a>
+            </div>
+
+
+            <div class="food-grid" id="foodGrid">
+
+                <!-- FOOD 1 -->
+
+                <article class="food-card">
+
+                    <div class="food-image pizza">
+                        🍕
+                        <span class="discount">20% OFF</span>
+                    </div>
+
+                    <div class="food-info">
+
+                        <h3>Cheese Burst Pizza</h3>
+
+                        <p class="restaurant">
+                            🍴 Pizza Palace
+                        </p>
+
+                        <div class="food-details">
+                            <span class="rating">⭐ 4.8</span>
+                            <span>• 25 min</span>
+                            <span>• ₹299</span>
+                        </div>
+
+                        <button
+                            class="add-button"
+                            data-name="Cheese Burst Pizza"
+                            data-price="299"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FOOD 2 -->
+
+                <article class="food-card">
+
+                    <div class="food-image burger">
+                        🍔
+                        <span class="discount">15% OFF</span>
+                    </div>
+
+                    <div class="food-info">
+
+                        <h3>Classic Chicken Burger</h3>
+
+                        <p class="restaurant">
+                            🍴 Burger House
+                        </p>
+
+                        <div class="food-details">
+                            <span class="rating">⭐ 4.7</span>
+                            <span>• 20 min</span>
+                            <span>• ₹199</span>
+                        </div>
+
+                        <button
+                            class="add-button"
+                            data-name="Classic Chicken Burger"
+                            data-price="199"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FOOD 3 -->
+
+                <article class="food-card">
+
+                    <div class="food-image biryani">
+                        🍛
+                        <span class="discount">25% OFF</span>
+                    </div>
+
+                    <div class="food-info">
+
+                        <h3>Chicken Biryani</h3>
+
+                        <p class="restaurant">
+                            🍴 Spice Kitchen
+                        </p>
+
+                        <div class="food-details">
+                            <span class="rating">⭐ 4.9</span>
+                            <span>• 30 min</span>
+                            <span>• ₹249</span>
+                        </div>
+
+                        <button
+                            class="add-button"
+                            data-name="Chicken Biryani"
+                            data-price="249"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FOOD 4 -->
+
+                <article class="food-card">
+
+                    <div class="food-image noodles">
+                        🍜
+                        <span class="discount">10% OFF</span>
+                    </div>
+
+                    <div class="food-info">
+
+                        <h3>Veg Hakka Noodles</h3>
+
+                        <p class="restaurant">
+                            🍴 Asian Bowl
+                        </p>
+
+                        <div class="food-details">
+                            <span class="rating">⭐ 4.6</span>
+                            <span>• 25 min</span>
+                            <span>• ₹179</span>
+                        </div>
+
+                        <button
+                            class="add-button"
+                            data-name="Veg Hakka Noodles"
+                            data-price="179"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FOOD 5 -->
+
+                <article class="food-card">
+
+                    <div class="food-image chicken">
+                        🍗
+                        <span class="discount">30% OFF</span>
+                    </div>
+
+                    <div class="food-info">
+
+                        <h3>Peri Peri Chicken</h3>
+
+                        <p class="restaurant">
+                            🍴 Grill House
+                        </p>
+
+                        <div class="food-details">
+                            <span class="rating">⭐ 4.8</span>
+                            <span>• 35 min</span>
+                            <span>• ₹349</span>
+                        </div>
+
+                        <button
+                            class="add-button"
+                            data-name="Peri Peri Chicken"
+                            data-price="349"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FOOD 6 -->
+
+                <article class="food-card">
+
+                    <div class="food-image dosa">
+                        🥞
+                        <span class="discount">20% OFF</span>
+                    </div>
+
+                    <div class="food-info">
+
+                        <h3>Masala Dosa</h3>
+
+                        <p class="restaurant">
+                            🍴 South Indian Hub
+                        </p>
+
+                        <div class="food-details">
+                            <span class="rating">⭐ 4.9</span>
+                            <span>• 15 min</span>
+                            <span>• ₹129</span>
+                        </div>
+
+                        <button
+                            class="add-button"
+                            data-name="Masala Dosa"
+                            data-price="129"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= RIGHT SIDEBAR ================= -->
+
+    <aside class="right-sidebar">
+
+        <!-- CART -->
+
+        <div class="card cart-card">
+
+            <div class="card-header">
+                <h2>🛒 Your Cart</h2>
+                <span id="cartCount">0</span>
+            </div>
+
+            <div id="cartItems" class="cart-items">
+
+                <p class="empty-cart">
+                    Your cart is empty.
+                </p>
+
+            </div>
+
+            <div class="cart-total">
+
+                <div>
+                    <span>Total</span>
+                    <strong id="cartTotal">₹0</strong>
+                </div>
+
+                <button id="checkoutButton">
+                    Checkout
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- OFFER -->
+
+        <div class="card offer-card">
+
+            <div class="offer-icon">
+                🎁
+            </div>
+
+            <div>
+                <h3>Get 50% OFF</h3>
+                <p>Use code <strong>FOODIE50</strong></p>
+            </div>
+
+        </div>
+
+
+        <!-- TOP RESTAURANTS -->
+
+        <div class="card">
+
+            <h2>Top Restaurants</h2>
+
+            <div class="restaurant-item">
+
+                <div class="restaurant-logo">
+                    🍕
+                </div>
+
+                <div>
+                    <strong>Pizza Palace</strong>
+                    <small>⭐ 4.8 • 20 min</small>
+                </div>
+
+            </div>
+
+
+            <div class="restaurant-item">
+
+                <div class="restaurant-logo">
+                    🍛
+                </div>
+
+                <div>
+                    <strong>Spice Kitchen</strong>
+                    <small>⭐ 4.9 • 25 min</small>
+                </div>
+
+            </div>
+
+
+            <div class="restaurant-item">
+
+                <div class="restaurant-logo">
+                    🍔
+                </div>
+
+                <div>
+                    <strong>Burger House</strong>
+                    <small>⭐ 4.7 • 18 min</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
