@@ -1,486 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Foodie - Food Delivery</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="Discover the food you love, from everyday South Indian tiffin to comforting meals. Delivered with care by TWIGGY.">
+  <title>TWIGGY — Good food, on your time</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
-
-<div class="container">
-
-    <!-- ================= LEFT SIDEBAR ================= -->
-
-    <aside class="sidebar">
-
-        <div class="logo">
-            🍔 <span>Foodie</span>
-        </div>
-
-        <nav>
-
-            <div class="nav-item active">
-                <span>🏠</span>
-                <p>Home</p>
-            </div>
-
-            <div class="nav-item">
-                <span>🔍</span>
-                <p>Search</p>
-            </div>
-
-            <div class="nav-item">
-                <span>❤️</span>
-                <p>Favorites</p>
-            </div>
-
-            <div class="nav-item">
-                <span>📦</span>
-                <p>Orders</p>
-            </div>
-
-            <div class="nav-item">
-                <span>🛒</span>
-                <p>Cart</p>
-            </div>
-
-            <div class="nav-item">
-                <span>👤</span>
-                <p>Profile</p>
-            </div>
-
-        </nav>
-
-        <button class="order-button">
-            Order Now
-        </button>
-
-    </aside>
-
-
-    <!-- ================= MAIN CONTENT ================= -->
-
-    <main class="main">
-
-        <header class="top-header">
-
-            <div>
-                <h2>Good Morning 👋</h2>
-                <p>What would you like to eat today?</p>
-            </div>
-
-            <div class="location">
-                📍 Sathyamangalam
-            </div>
-
-        </header>
-
-
-        <!-- SEARCH -->
-
-        <section class="search-section">
-
-            <div class="search-box">
-                🔍
-                <input
-                    id="searchInput"
-                    type="text"
-                    placeholder="Search for food or restaurants..."
-                >
-            </div>
-
-        </section>
-
-
-        <!-- CATEGORIES -->
-
-        <section class="categories">
-
-            <h2>Categories</h2>
-
-            <div class="category-list">
-
-                <div class="category active-category">
-                    <div>🍕</div>
-                    <span>Pizza</span>
-                </div>
-
-                <div class="category">
-                    <div>🍔</div>
-                    <span>Burgers</span>
-                </div>
-
-                <div class="category">
-                    <div>🍜</div>
-                    <span>Noodles</span>
-                </div>
-
-                <div class="category">
-                    <div>🍗</div>
-                    <span>Chicken</span>
-                </div>
-
-                <div class="category">
-                    <div>🍛</div>
-                    <span>Indian</span>
-                </div>
-
-                <div class="category">
-                    <div>🥗</div>
-                    <span>Healthy</span>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- POPULAR FOOD -->
-
-        <section class="food-section">
-
-            <div class="section-title">
-                <h2>Popular Near You</h2>
-                <a href="#">View all</a>
-            </div>
-
-
-            <div class="food-grid" id="foodGrid">
-
-                <!-- FOOD 1 -->
-
-                <article class="food-card">
-
-                    <div class="food-image pizza">
-                        🍕
-                        <span class="discount">20% OFF</span>
-                    </div>
-
-                    <div class="food-info">
-
-                        <h3>Cheese Burst Pizza</h3>
-
-                        <p class="restaurant">
-                            🍴 Pizza Palace
-                        </p>
-
-                        <div class="food-details">
-                            <span class="rating">⭐ 4.8</span>
-                            <span>• 25 min</span>
-                            <span>• ₹299</span>
-                        </div>
-
-                        <button
-                            class="add-button"
-                            data-name="Cheese Burst Pizza"
-                            data-price="299"
-                        >
-                            Add to Cart
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- FOOD 2 -->
-
-                <article class="food-card">
-
-                    <div class="food-image burger">
-                        🍔
-                        <span class="discount">15% OFF</span>
-                    </div>
-
-                    <div class="food-info">
-
-                        <h3>Classic Chicken Burger</h3>
-
-                        <p class="restaurant">
-                            🍴 Burger House
-                        </p>
-
-                        <div class="food-details">
-                            <span class="rating">⭐ 4.7</span>
-                            <span>• 20 min</span>
-                            <span>• ₹199</span>
-                        </div>
-
-                        <button
-                            class="add-button"
-                            data-name="Classic Chicken Burger"
-                            data-price="199"
-                        >
-                            Add to Cart
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- FOOD 3 -->
-
-                <article class="food-card">
-
-                    <div class="food-image biryani">
-                        🍛
-                        <span class="discount">25% OFF</span>
-                    </div>
-
-                    <div class="food-info">
-
-                        <h3>Chicken Biryani</h3>
-
-                        <p class="restaurant">
-                            🍴 Spice Kitchen
-                        </p>
-
-                        <div class="food-details">
-                            <span class="rating">⭐ 4.9</span>
-                            <span>• 30 min</span>
-                            <span>• ₹249</span>
-                        </div>
-
-                        <button
-                            class="add-button"
-                            data-name="Chicken Biryani"
-                            data-price="249"
-                        >
-                            Add to Cart
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- FOOD 4 -->
-
-                <article class="food-card">
-
-                    <div class="food-image noodles">
-                        🍜
-                        <span class="discount">10% OFF</span>
-                    </div>
-
-                    <div class="food-info">
-
-                        <h3>Veg Hakka Noodles</h3>
-
-                        <p class="restaurant">
-                            🍴 Asian Bowl
-                        </p>
-
-                        <div class="food-details">
-                            <span class="rating">⭐ 4.6</span>
-                            <span>• 25 min</span>
-                            <span>• ₹179</span>
-                        </div>
-
-                        <button
-                            class="add-button"
-                            data-name="Veg Hakka Noodles"
-                            data-price="179"
-                        >
-                            Add to Cart
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- FOOD 5 -->
-
-                <article class="food-card">
-
-                    <div class="food-image chicken">
-                        🍗
-                        <span class="discount">30% OFF</span>
-                    </div>
-
-                    <div class="food-info">
-
-                        <h3>Peri Peri Chicken</h3>
-
-                        <p class="restaurant">
-                            🍴 Grill House
-                        </p>
-
-                        <div class="food-details">
-                            <span class="rating">⭐ 4.8</span>
-                            <span>• 35 min</span>
-                            <span>• ₹349</span>
-                        </div>
-
-                        <button
-                            class="add-button"
-                            data-name="Peri Peri Chicken"
-                            data-price="349"
-                        >
-                            Add to Cart
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- FOOD 6 -->
-
-                <article class="food-card">
-
-                    <div class="food-image dosa">
-                        🥞
-                        <span class="discount">20% OFF</span>
-                    </div>
-
-                    <div class="food-info">
-
-                        <h3>Masala Dosa</h3>
-
-                        <p class="restaurant">
-                            🍴 South Indian Hub
-                        </p>
-
-                        <div class="food-details">
-                            <span class="rating">⭐ 4.9</span>
-                            <span>• 15 min</span>
-                            <span>• ₹129</span>
-                        </div>
-
-                        <button
-                            class="add-button"
-                            data-name="Masala Dosa"
-                            data-price="129"
-                        >
-                            Add to Cart
-                        </button>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- ================= RIGHT SIDEBAR ================= -->
-
-    <aside class="right-sidebar">
-
-        <!-- CART -->
-
-        <div class="card cart-card">
-
-            <div class="card-header">
-                <h2>🛒 Your Cart</h2>
-                <span id="cartCount">0</span>
-            </div>
-
-            <div id="cartItems" class="cart-items">
-
-                <p class="empty-cart">
-                    Your cart is empty.
-                </p>
-
-            </div>
-
-            <div class="cart-total">
-
-                <div>
-                    <span>Total</span>
-                    <strong id="cartTotal">₹0</strong>
-                </div>
-
-                <button id="checkoutButton">
-                    Checkout
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- OFFER -->
-
-        <div class="card offer-card">
-
-            <div class="offer-icon">
-                🎁
-            </div>
-
-            <div>
-                <h3>Get 50% OFF</h3>
-                <p>Use code <strong>FOODIE50</strong></p>
-            </div>
-
-        </div>
-
-
-        <!-- TOP RESTAURANTS -->
-
-        <div class="card">
-
-            <h2>Top Restaurants</h2>
-
-            <div class="restaurant-item">
-
-                <div class="restaurant-logo">
-                    🍕
-                </div>
-
-                <div>
-                    <strong>Pizza Palace</strong>
-                    <small>⭐ 4.8 • 20 min</small>
-                </div>
-
-            </div>
-
-
-            <div class="restaurant-item">
-
-                <div class="restaurant-logo">
-                    🍛
-                </div>
-
-                <div>
-                    <strong>Spice Kitchen</strong>
-                    <small>⭐ 4.9 • 25 min</small>
-                </div>
-
-            </div>
-
-
-            <div class="restaurant-item">
-
-                <div class="restaurant-logo">
-                    🍔
-                </div>
-
-                <div>
-                    <strong>Burger House</strong>
-                    <small>⭐ 4.7 • 18 min</small>
-                </div>
-
-            </div>
-
-        </div>
-
-    </aside>
-
-</div>
-
-
-<script src="script.js"></script>
-
+  <div class="announcement"><span class="announcement-dot"></span> Your little moments deserve a delicious upgrade <span class="announcement-offer">Free delivery on orders over ₹299</span></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="TWIGGY home"><span class="brand-mark">t</span><span class="brand-word">twiggy<span class="brand-period">.</span></span></a>
+    <button class="delivery-location" type="button" aria-label="Delivery location: Sathyamangalam">
+      <span class="location-pin">⌖</span><span><small>DELIVERING TO</small><strong>Sathyamangalam <span class="chevron">⌄</span></strong></span>
+    </button>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a><a class="nav-link" href="#menu">Explore menu</a><a class="nav-link" href="#why-twiggy">Our promise</a>
+    </nav>
+    <div class="header-actions"><button class="icon-button favorite-shortcut" id="favoritesShortcut" type="button" aria-label="Show favorites"><span>♡</span></button><button class="cart-trigger" id="openCart" type="button"><span class="cart-icon">▱</span><span class="cart-trigger-label">Your cart</span><span class="cart-badge" id="cartCount">0</span></button></div>
+  </header>
+
+  <main id="home">
+    <section class="hero page-width" aria-labelledby="heroTitle">
+      <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-line"></span> A little joy, delivered</div><h1 id="heroTitle">Good food.<br><em>Good mood.</em></h1><p>From your morning idli to that late-night biryani craving, your favourites are just a few taps away.</p><a class="primary-button hero-button" href="#menu">Explore the menu <span>↗</span></a><div class="hero-social"><div class="avatar-stack"><span>☺</span><span>✿</span><span>☻</span></div><span><strong>2,400+</strong> happy meals served</span><span class="social-divider"></span><span class="hero-rating">★ 4.8</span></div></div>
+      <div class="hero-visual"><img class="hero-photo" src="https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&w=1200&q=85" alt="Golden South Indian dosa served with chutneys"><div class="hero-photo-wash"></div><div class="hero-note"><span class="note-icon">✳</span><span><strong>Made with love</strong><small>Fresh from local kitchens</small></span></div><div class="hero-floating-card"><span class="floating-star">★</span><span><strong>Fresh &amp; flavourful</strong><small>Every single time</small></span></div><span class="hero-sparkle sparkle-one">✳</span><span class="hero-sparkle sparkle-two">✦</span></div>
+    </section>
+
+    <section class="quick-perks page-width" aria-label="TWIGGY delivery benefits"><div class="perk"><span class="perk-icon green-icon">◷</span><span><strong>Quick delivery</strong><small>At your doorstep in 30 min</small></span></div><span class="perk-separator"></span><div class="perk"><span class="perk-icon coral-icon">✿</span><span><strong>Made fresh</strong><small>Goodness in every bite</small></span></div><span class="perk-separator"></span><div class="perk"><span class="perk-icon gold-icon">♡</span><span><strong>Local favourites</strong><small>From kitchens near you</small></span></div><div class="perks-decoration">✳</div></section>
+
+    <section class="menu-section page-width" id="menu" aria-labelledby="menuTitle">
+      <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> A menu for every moment</div><h2 id="menuTitle">What are you <em>craving?</em></h2></div><div class="search-box"><span class="search-icon">⌕</span><input id="searchInput" type="search" placeholder="Search dishes or restaurants" aria-label="Search dishes or restaurants"><kbd>/</kbd></div></div>
+      <div class="category-row" id="categoryList" role="group" aria-label="Filter menu by category"><button class="category-chip active" data-category="All" type="button">Everything <span>✳</span></button><button class="category-chip" data-category="Tiffin" type="button"><span class="chip-emoji">🥞</span> Tiffin</button><button class="category-chip" data-category="Lunch" type="button"><span class="chip-emoji">🍛</span> Lunch</button><button class="category-chip" data-category="Dinner" type="button"><span class="chip-emoji">🍽️</span> Dinner</button><button class="category-chip" data-category="Snacks" type="button"><span class="chip-emoji">🥟</span> Snacks</button><button class="category-chip" data-category="Desserts" type="button"><span class="chip-emoji">🍰</span> Desserts</button><button class="category-chip" data-category="Drinks" type="button"><span class="chip-emoji">🥤</span> Drinks</button></div>
+      <div class="menu-meta"><p id="resultCount">Our picks, made for you</p><button id="favoritesFilter" class="text-filter" type="button">♡ <span>Show favourites</span></button></div>
+      <div class="food-grid" id="foodGrid" aria-live="polite"></div>
+      <div class="no-results" id="noResults" hidden><span>◌</span><h3>No bites found just yet</h3><p>Try another dish, or pick a different category.</p><button class="text-filter" id="clearFilters" type="button">Clear filters</button></div>
+    </section>
+
+    <section class="promise-band" id="why-twiggy"><div class="promise-inner page-width"><div class="promise-mark">t<span>.</span></div><div><div class="eyebrow light-eyebrow"><span class="eyebrow-line"></span> The TWIGGY promise</div><h2>Good food should<br>feel like <em>coming home.</em></h2></div><p>Thoughtfully picked local kitchens. Fresh ingredients. The kind of meals that make an ordinary day feel a little special.</p><a href="#menu" class="promise-link">Find your feel-good meal <span>↗</span></a><span class="promise-decoration">✳</span></div></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">t</span><span class="brand-word">twiggy<span class="brand-period">.</span></span></a><p>Made for your everyday cravings. <span>© 2026 TWIGGY</span></p><a href="#home" class="back-top">Back to top ↑</a></footer>
+
+  <div class="cart-backdrop" id="cartBackdrop" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cartTitle" aria-modal="true" role="dialog" aria-hidden="true">
+    <div class="drawer-header"><div><span class="eyebrow"><span class="eyebrow-line"></span> Your good stuff</span><h2 id="cartTitle">Your cart <span id="drawerCartCount">(0)</span></h2></div><button class="icon-button close-cart" id="closeCart" type="button" aria-label="Close cart">×</button></div>
+    <div class="cart-delivery-note"><span>◷</span><span><strong>Arriving in about 30–40 min</strong><small>Freshly prepared, just for you</small></span></div>
+    <div class="cart-items" id="cartItems"><div class="empty-cart"><span>♧</span><h3>Your cart is feeling light</h3><p>Add something delicious and we'll take it from here.</p><button class="primary-button" id="browseMenu" type="button">Explore the menu <span>↗</span></button></div></div>
+    <div class="cart-footer" id="cartFooter"><div class="cart-subtotal"><span>Subtotal</span><strong id="cartTotal">₹0</strong></div><div class="cart-fee"><span>Delivery fee</span><span id="deliveryFee">₹0</span></div><div class="cart-grand-total"><span>Total</span><strong id="grandTotal">₹0</strong></div><button class="checkout-button" id="checkoutButton" type="button">Place demo order <span>→</span></button><p class="checkout-note">Demo checkout · No payment will be collected</p></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
+
